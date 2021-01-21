@@ -12,7 +12,7 @@
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![npm](https://img.shields.io/npm/v/cordova-plugin-android-dark-mode-support.svg)](https://www.npmjs.com/package/cordova-plugin-android-dark-mode-support)
 
-#### Apache Cordova plugin to properly support the Dark Mode on Android
+#### Apache Cordova plugin to enable proper dark mode support for Android WebView's
 
 ### Context/Background
 
