@@ -1,0 +1,11 @@
+dependencies {
+    implementation "androidx.webkit:webkit:1.4.0"
+}
+
+android {
+    sourceSets {
+        main.java {
+            srcDirs += 'src/main/kotlin'
+        }
+    }
+}

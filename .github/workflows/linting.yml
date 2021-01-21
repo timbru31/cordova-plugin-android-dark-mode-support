@@ -1,0 +1,16 @@
+name: Linting
+
+on: [push, pull_request]
+
+jobs:
+  build:
+    runs-on: macos-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Setup
+        run: brew install ktlint
+
+      - name: Linting
+        run: ktlint src/android/*.kt

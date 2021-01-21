@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0" id="cordova-plugin-android-dark-mode-support" version="1.0.0">
+    <name>AndroidDarkModeSupport</name>
+    <description>Apache Cordova plugin to enable proper dark mode support for Android WebView's</description>
+    <author>Tim Brust</author>
+    <license>MIT</license>
+    <keywords>cordova,android,dark-mode,darkmode</keywords>
+
+    <engines>
+        <engine name="cordova" version=">=9.0.0" />
+        <engine name="cordova-android" version=">=9.0.0" />
+    </engines>
+
+    <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="AndroidDarkModeSupport">
+                <param name="onload" value="true" />
+                <param name="android-package" value="de.dustplanet.cordova.AndroidDarkModeSupport" />
+            </feature>
+        </config-file>
+
+        <source-file src="src/android/AndroidDarkModeSupport.kt" target-dir="app/src/main/kotlin/de/dustplanet/cordova" />
+        <framework src="src/android/build-extras.gradle" custom="true" type="gradleReference"/>
+    </platform>
+</plugin>
