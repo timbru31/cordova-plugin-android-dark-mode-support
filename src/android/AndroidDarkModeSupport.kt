@@ -27,14 +27,14 @@ class AndroidDarkModeSupport : CordovaPlugin() {
                 when {
                     nightMode -> WebSettingsCompat.FORCE_DARK_ON
                     else -> WebSettingsCompat.FORCE_DARK_OFF
-                }
+                },
             )
         }
 
         if (WebViewFeature.isFeatureSupported(WebViewFeature.FORCE_DARK_STRATEGY)) {
             WebSettingsCompat.setForceDarkStrategy(
                 view,
-                WebSettingsCompat.DARK_STRATEGY_WEB_THEME_DARKENING_ONLY
+                WebSettingsCompat.DARK_STRATEGY_WEB_THEME_DARKENING_ONLY,
             )
         }
     }
