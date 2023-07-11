@@ -10,7 +10,7 @@
     "release": "standard-version -s -a"
   },
   "devDependencies": {
-    "prettier": "^2.2.1",
+    "prettier": "^3.0.0",
     "replace": "^1.2.0",
     "standard-version": "^9.1.0"
   },
