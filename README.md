@@ -20,14 +20,21 @@ Additionally, when the native configuration changes, it is re-evaluated whether 
 
 Under the hood, the `Configuration.UI_MODE_NIGHT_YES`, `WebSettingsCompat.setForceDark` and `WebSettingsCompat.setForceDarkStrategy` are used. You can read more here: https://developer.android.com/guide/webapps/dark-theme
 
+#### Attention for SDK >= 33 / Android 13
+
+In Android 13 (SDK 33) you do not this plugin anymore as the behavior was changed [[again](https://developer.android.com/about/versions/13/behavior-changes-13). All you need to do is tweak the used theme by setting:
+```xml
+        <preference name="AndroidPostSplashScreenTheme" value="@style/Theme.AppCompat.DayNight.NoActionBar" />
+```
+
 ### Supported platforms
 
 -   **Android**
 
 #### Prerequisites/Warnings
 
-AndroidX and Kotlin support are required. Therefore only **cordova-android >= 9.0.0** is supported.  
-You need to enable Kotlin and AndroidX in your `config.xml` by setting `GradlePluginKotlinEnabled` **and** `AndroidXEnabled` to `true`.
+Kotlin support is required. Due to the AndroidX support libraries used, only **cordova-android >= 11.0.0** is supported.  
+You need to enable Kotlin `config.xml` by setting `GradlePluginKotlinEnabled` to `true`.
 
 ### Installation
 
