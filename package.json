@@ -1,6 +1,6 @@
 {
   "name": "cordova-plugin-android-dark-mode-support",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Apache Cordova plugin to enable proper dark mode support for Android WebView's",
   "author": "Tim Brust <github@timbrust.de>",
   "license": "MIT",

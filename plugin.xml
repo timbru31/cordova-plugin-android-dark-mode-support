@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0" id="cordova-plugin-android-dark-mode-support" version="1.0.0">
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0" id="cordova-plugin-android-dark-mode-support" version="2.0.0">
     <name>AndroidDarkModeSupport</name>
     <description>Apache Cordova plugin to enable proper dark mode support for Android WebView's</description>
     <author>Tim Brust</author>
