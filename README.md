@@ -24,7 +24,7 @@ Under the hood, the `Configuration.UI_MODE_NIGHT_YES`, `WebSettingsCompat.setFor
 
 In Android 13 (SDK 33) you do not this plugin anymore as the behavior was changed [[again](https://developer.android.com/about/versions/13/behavior-changes-13). All you need to do is tweak the used theme by setting:
 ```xml
-        <preference name="AndroidPostSplashScreenTheme" value="@style/Theme.AppCompat.DayNight.NoActionBar" />
+<preference name="AndroidPostSplashScreenTheme" value="@style/Theme.AppCompat.DayNight.NoActionBar" />
 ```
 
 ### Supported platforms
