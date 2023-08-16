@@ -18,3 +18,17 @@ jobs:
 
       - name: Linting
         run: ktlint src/android/*.kt
+
+  auto-merge:
+    runs-on: ubuntu-latest
+    needs: build
+
+    permissions:
+      pull-requests: write
+      contents: write
+
+    steps:
+      - name: Automatically merge dependabot upgrades
+        uses: fastify/github-action-merge-dependabot@v3.9.0
+        with:
+          target: minor
