@@ -7,11 +7,7 @@
   "repository": "timbru31/cordova-plugin-android-dark-mode-support",
   "bugs": "https://github.com/timbru31/cordova-plugin-android-dark-mode-support/issues",
   "scripts": {
-    "lint": "npm run lint:android && npm run lint:typescript",
-    "lint:android": "ktlint src/android",
-    "lint:typescript": "eslint 'www/**/*.ts'",
-    "build": "rm -rf dist && tsc",
-    "prerelease": "npm run build",
+    "lint": "ktlint src/android",
     "release": "standard-version -s -a"
   },
   "devDependencies": {

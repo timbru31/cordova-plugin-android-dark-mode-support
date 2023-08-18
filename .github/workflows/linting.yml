@@ -17,17 +17,14 @@ jobs:
         with:
           node-version: 18
 
+      - name: Setup
+        run: brew install ktlint
+
       - name: Environment Information
         run: |
           node --version
           npm --version
-
-      - name: Setup
-        run: |
-          brew install ktlint
           ktlint --version
-          npm ci
-
       - name: Linting
         run: npm run lint
 
