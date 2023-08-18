@@ -13,11 +13,23 @@ jobs:
     steps:
       - uses: actions/checkout@v3.5.3
 
+      - uses: actions/setup-node@v3.8.1
+        with:
+          node-version: 18
+
+      - name: Environment Information
+        run: |
+          node --version
+          npm --version
+
       - name: Setup
-        run: brew install ktlint
+        run: |
+          brew install ktlint
+          ktlint --version
+          npm ci
 
       - name: Linting
-        run: ktlint src/android/*.kt
+        run: npm run lint
 
   auto-merge:
     runs-on: ubuntu-latest
