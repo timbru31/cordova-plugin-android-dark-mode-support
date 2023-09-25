@@ -8,7 +8,6 @@ import org.apache.cordova.CordovaPlugin
 import org.apache.cordova.engine.SystemWebView
 
 class AndroidDarkModeSupport : CordovaPlugin() {
-
     override fun pluginInitialize() {
         checkDarkMode()
     }
@@ -19,8 +18,9 @@ class AndroidDarkModeSupport : CordovaPlugin() {
 
     private fun checkDarkMode() {
         if (Build.VERSION.SDK_INT <= Build.VERSION_CODES.S_V2) {
-            val nightMode: Boolean = cordova.context.resources.configuration.uiMode and
-                Configuration.UI_MODE_NIGHT_MASK == Configuration.UI_MODE_NIGHT_YES
+            val nightMode: Boolean =
+                cordova.context.resources.configuration.uiMode and
+                    Configuration.UI_MODE_NIGHT_MASK == Configuration.UI_MODE_NIGHT_YES
             val view = (webView.engine.view as SystemWebView).settings
 
             if (WebViewFeature.isFeatureSupported(WebViewFeature.FORCE_DARK)) {
